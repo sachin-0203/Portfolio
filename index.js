@@ -103,6 +103,14 @@ function scrollToTop() {
   });
 };
 
+// document.querySelectorAll('.plus').forEach(checkbox =>{
+//   checkbox.addEventListener('change', function(){
+//     let container = this.closet('.container-items');
+//     if(container){
+//       container.style.height = this.checked ? '38vh': '15vh'
+//     }
+//   });
+// });
 const boxes = document.querySelectorAll(".container-items");
 
 // about section boxes
@@ -197,8 +205,8 @@ gsap.from('.home-logo', {
 gsap.from('.col-2 .primary-heading h1, .col-2 .about-text, .col-2 .cv-btn2',{
   scrollTrigger: {
     trigger:'.col-2',
-    start: 'top 100%',
-    toggleActions: 'restart none reverse none',
+    start: 'top 90%',
+    toggleActions: 'restart none none none',
   },
   y: (index, target)=>{
     if(target.matches(".primary-heading h1")) return -20;
@@ -206,8 +214,8 @@ gsap.from('.col-2 .primary-heading h1, .col-2 .about-text, .col-2 .cv-btn2',{
     if(target.matches('.cv-btn2')) return 20;
   },
   opacity: 0,
-  stagger: 0.3,
-  duration: 1,
+  stagger: 0.05,
+  duration: 1.5,
   ease: 'back.out(1.7)',
 });
 // gsap.from('.about-text', {
