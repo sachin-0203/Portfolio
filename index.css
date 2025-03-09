@@ -7,6 +7,23 @@ html{
   scroll-behavior: smooth;
 }
 
+.welcome-parent{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #262626;
+  position: fixed;
+  z-index: 1000;
+  overflow: hidden;
+}
+.welcome-child{
+  font-size: x-large;
+  font-family: monospace;
+  transform-origin: top;
+  color: white;
+}
 .letter{
   font-size: 10.5rem;
   letter-spacing: 1rem;
@@ -18,7 +35,7 @@ html{
   stroke-dashoffset: 1;
   stroke: rgb(96, 96, 217);
   fill: transparent;
-  animation: writing 1.5s linear forwards 0.1s , filling 1s linear forwards 1.8s;
+  animation: writing 1s linear forwards 1.2s , filling 1.4s linear forwards 2.5s;
   opacity: 0;
 }
 @keyframes writing {
@@ -84,7 +101,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 90px;
+  height: 11vh;
   width: 100%;
   background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%), radial-gradient(circle at top left, #4458dc, #854fee);
   box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
@@ -229,7 +246,7 @@ label:active .circle{
 /* --------minibar----------- */
 .minibar{
   display: none;
-  height: 4.5rem;
+  height: 9vh;
   width: 100%;
   background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%), radial-gradient(circle at top left, #4458dc, #854fee);
   position: fixed;
@@ -402,20 +419,11 @@ nav2 ul li a:hover::after {
   margin: 0 3.125rem;
   gap: 5rem;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .home-logo img {
   height: 26.25rem;
-  animation: moveleft 1s ease-in-out ;
-}
-@keyframes moveleft {
-  from{
-    transform: translateX(100%);
-  }
-  to{
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 .home-text {
@@ -626,19 +634,18 @@ nav2 ul li a:hover::after {
 .about-row-two {
   display: flex;
   justify-content: center;
-  margin: 50px 30px;
+  margin: 5px 30px;
   text-align: center;
-  gap: 20px;
   flex-wrap: wrap;
+  height: 50vh;
 }
 
 .container-items {
   box-sizing: border-box;
-  height: 200px;
-  width: 300px;
+  height: 10vh;
+  width: 60vw;
   background-color: #4e44dccf;
-  border: 2px solid rgb(133, 12, 254);
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 12px 25px;
   text-align: center;
   display: flex;
@@ -647,6 +654,11 @@ nav2 ul li a:hover::after {
   flex-direction: column;
   cursor: pointer;
   color:white;
+}
+.each-tabs{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .tab-content{
   max-height: 0;
@@ -1013,7 +1025,7 @@ footer{
     padding: 0 0;
   }
   .primary-heading{
-    font-size: 30px;
+    font-size: 20px;
   }
   .inner-text {
     font-size: 0.6rem;

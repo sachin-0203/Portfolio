@@ -1,3 +1,4 @@
+gsap.registerPlugin(ScrollTrigger);
 
 // Dark Mode
 document.addEventListener("DOMContentLoaded", function () {
@@ -134,3 +135,91 @@ function toggleTitle(index) {
     }
   });
 }
+
+// GSAP ANIMATION
+
+
+// welcome part
+gsap.to('.welcome-parent',{
+  delay: 0.8,
+  height: 0,
+  ease: 'expoinOut',
+  duration: 0.5
+})
+
+gsap.to('.welcome-child',{
+  scaleY: 1,
+  ease: 'power2.inOut',
+  transformOrigin: "top",
+  onComplete: ()=>{
+    gsap.to('.welcome-child',{
+      scaleY: 0,
+      duration: 0.5,
+      ease: "power2.inOut",
+    });
+  },
+});
+// home page
+gsap.from('#home',{
+  delay: 1.3,
+  opacity: 0,
+})
+
+gsap.from('.surname', {
+  y: 50,
+  opacity: 0,
+  delay: 3,
+  duration: 1,
+  ease: "power2.out",
+})
+gsap.from('.marquee', {
+  y: 50,
+  opacity: 0,
+  delay: 3.4,
+  duration: 1,
+  ease: "power2.out",
+})
+gsap.from('.home-btn', {
+  y: 50,
+  opacity: 0,
+  delay: 3.6,
+  duration: 1,
+  ease: "power2.out",
+})
+gsap.from('.home-logo', {
+  x: 50,
+  opacity: 0,
+  delay: 1.5,
+  duration: 1,
+  ease: "power2.out",
+});
+
+gsap.from('.col-2 .primary-heading h1, .col-2 .about-text, .col-2 .cv-btn2',{
+  scrollTrigger: {
+    trigger:'.col-2',
+    start: 'top 100%',
+    toggleActions: 'restart none reverse none',
+  },
+  y: (index, target)=>{
+    if(target.matches(".primary-heading h1")) return -20;
+    if(target.matches(".about-text")) return 50;
+    if(target.matches('.cv-btn2')) return 20;
+  },
+  opacity: 0,
+  stagger: 0.3,
+  duration: 1,
+  ease: 'back.out(1.7)',
+});
+// gsap.from('.about-text', {
+//   scrollTrigger:{
+//     trigger: '.about-text',
+//     start: "top 120%",
+//     toggleActions: "restart none reverse none",
+//     markers: true,
+//   },
+//   yPercent: 50,
+//   stagger: 0.09,
+//   opacity: 0,
+//   duration: 1.3,
+//   ease: 'power2.inOut'
+// })
