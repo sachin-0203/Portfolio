@@ -83,7 +83,7 @@ body {
 .primary-heading {
   font-family: monospace;
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 2px;
 }
@@ -633,19 +633,20 @@ nav2 ul li a:hover::after {
 
 .about-row-two {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 0.2rem;
   margin: 5px 30px;
   text-align: center;
-  flex-wrap: wrap;
-  height: 80vh;
-  transition: all 1s ease;
+  height: auto;
+  transition: all 0.8s ease;
 }
 
 .container-items {
   box-sizing: border-box;
-  min-height: 5vh;
-  height: 15vh;
-  width: 60vw;
+  height: 10vh;
+  width: 90vw;
   background-color: #4e44dccf;
   border-radius: 5px;
   padding: 12px 25px;
@@ -655,53 +656,62 @@ nav2 ul li a:hover::after {
   flex-direction: column;
   cursor: pointer;
   color:white;
+  transition: height 0.7s ease;
+  position: relative;
+  overflow: hidden;
 }
-
+.container-items:hover{
+  background-color: #333;
+}
 .each-tabs{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
+  top: 6px;
+  width: 100%;
+}
+.tab-title  , .tab-icon{
+  position: relative;
+  margin-right: 1.9rem;
 }
 .plus-label{
   border: none;
   box-shadow: none;
 }
-
-.sub::before{
-  display: none;
-  opacity: 0;
+.add{
+  transition: transform 0.5s ease;
   margin-right: 6px;
-  transition: opacity 2s ease ;
-}
-.plus:checked + label .add{
-  display: none;
-  opacity: 0;
-}
-.plus:checked + label .sub::before{
-  display: inline;
-  opacity: 1;
 }
 
-.tab-content{
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-out;
-  opacity: 0;
-  transition: opacity 0.5s ease-out;
-  text-align: justify;
+.plus:checked + label .add{
+  transform: rotate(135deg);
 }
-.plus:checked + .tab-content{
-  display: inline;
-}
+
 .container-items:has(.plus:checked) {
-  height: 45vh;
+  height: 70vh;
 }
-.hide{
-  display: none;
-}
-.show {
-  max-height: 200px;
+.container-items:has(.plus:checked) .tab-content{
   opacity: 1;
+  visibility: visible;
+  max-height: 45vh;
+} 
+.tab-content{
+  font-size: 1.3rem;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-out;
+  text-align: justify;
+  overflow: hidden;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.show {
+  max-height: 45vh;
+  opacity: 1;
+  visibility: visible;
 }
 
 /* ----------services--------- */

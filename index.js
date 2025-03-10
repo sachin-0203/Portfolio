@@ -103,23 +103,29 @@ function scrollToTop() {
   });
 };
 
-// document.querySelectorAll('.plus').forEach(checkbox =>{
-//   checkbox.addEventListener('change', function(){
-//     let container = this.closet('.container-items');
-//     if(container){
-//       container.style.height = this.checked ? '38vh': '15vh'
-//     }
-//   });
-// });
+
 const boxes = document.querySelectorAll(".container-items");
 
 // about section boxes
 boxes.forEach((box, index) => {
   box.addEventListener("click", () => {
     togglepara(index);
-    toggleTitle(index);
+    toggleIcon(index);
   });
 });
+
+function toggleIcon(index) {
+  const eachCheckox = document.querySelectorAll('.plus')
+  eachCheckox.forEach((checkbox, i)=>{
+    if(i === index){
+      checkbox.checked = !checkbox.checked;
+    }
+    else{
+      checkbox.checked = false;
+    }
+  })
+}
+
 function togglepara(index) {
   const contents = document.querySelectorAll('.tab-content');
   contents.forEach((currContent, i) => {
@@ -128,18 +134,6 @@ function togglepara(index) {
     }
     else {
       currContent.classList.remove('show');
-    }
-  });
-}
-
-function toggleTitle(index) {
-  const titles = document.querySelectorAll('.each-tabs');
-  titles.forEach((title, i) => {
-    if (i == index) {
-      title.classList.toggle('hide');
-    }
-    else {
-      title.classList.remove('hide');
     }
   });
 }
