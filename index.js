@@ -1,5 +1,4 @@
 gsap.registerPlugin(ScrollTrigger);
-
 // Dark Mode
 document.addEventListener("DOMContentLoaded", function () {
   const body = document.body;
@@ -108,8 +107,7 @@ const boxes = document.querySelectorAll(".container-items");
 
 // about section boxes
 boxes.forEach((box, index) => {
-  box.addEventListener("click", () => {
-    togglepara(index);
+  box.addEventListener("click", () => {    
     toggleIcon(index);
   });
 });
@@ -126,42 +124,36 @@ function toggleIcon(index) {
   })
 }
 
-function togglepara(index) {
-  const contents = document.querySelectorAll('.tab-content');
-  contents.forEach((currContent, i) => {
-    if (i === index) {
-      currContent.classList.toggle('show')
-    }
-    else {
-      currContent.classList.remove('show');
-    }
-  });
-}
+// -----------------------GSAP ANIMATION--------------------------
 
-// GSAP ANIMATION
-
-
-// welcome part
+// --------Welcome Part
 gsap.to('.welcome-parent',{
   delay: 0.8,
   height: 0,
   ease: 'expoinOut',
-  duration: 0.5
+  duration: 0.5,
 })
+const textElement = document.querySelector('.welcome-child')
+const text = textElement.innerText;
+textElement.innerHTML = text.split("").map(char =>{
+  if(char === " " ) return `<span>&nbsp;</span>`
+  return `<span>${char}</span>`;
+}).join("");
 
-gsap.to('.welcome-child',{
-  scaleY: 1,
-  ease: 'power2.inOut',
-  transformOrigin: "top",
+gsap.to(".welcome-child span", {
+  duration: 0.5,
+  stagger: 0.08,
+  opacity: 1,
   onComplete: ()=>{
     gsap.to('.welcome-child',{
-      scaleY: 0,
-      duration: 0.5,
+      opacity: 0,
+      duration: 0.2,
       ease: "power2.inOut",
     });
   },
 });
-// home page
+
+// --------------Home Page
 gsap.from('#home',{
   delay: 1.3,
   opacity: 0,
@@ -196,32 +188,40 @@ gsap.from('.home-logo', {
   ease: "power2.out",
 });
 
-gsap.from('.col-2 .primary-heading h1, .col-2 .about-text, .col-2 .cv-btn2',{
+// -------About Page
+gsap.from('.col-2 .main-heading, .col-2 .about-text, .col-2 .hover-parent, .container-items',{
   scrollTrigger: {
     trigger:'.col-2',
     start: 'top 90%',
-    toggleActions: 'restart none none none',
   },
   y: (index, target)=>{
-    if(target.matches(".primary-heading h1")) return -20;
+    if(target.matches(".main-heading")) return -20;
     if(target.matches(".about-text")) return 50;
-    if(target.matches('.cv-btn2')) return 20;
+    if(target.matches('.hover-parent')) return 20;
   },
   opacity: 0,
-  stagger: 0.05,
-  duration: 1.5,
+  stagger: 0.5,
+  duration: 3,
   ease: 'back.out(1.7)',
 });
-// gsap.from('.about-text', {
-//   scrollTrigger:{
-//     trigger: '.about-text',
-//     start: "top 120%",
-//     toggleActions: "restart none reverse none",
-//     markers: true,
-//   },
-//   yPercent: 50,
-//   stagger: 0.09,
-//   opacity: 0,
-//   duration: 1.3,
-//   ease: 'power2.inOut'
-// })
+
+const hoverTl = gsap.timeline();
+hoverTl.pause();
+hoverTl.to(".hover-clr",{
+  width: "calc(100% + 1.48em)",
+  ease: "Elastic.easeOut(0.25)",
+  duration: 0.5,
+});
+hoverTl.to(".hover-clr",{
+  width: "2em",
+  left:"calc(100% - 1.48em)",
+  ease: "Elastic.easeOut(0.25)",
+  duration: 0.5,
+});
+const hoverDiv = document.querySelector(".download-link");
+hoverDiv.addEventListener("mouseenter", ()=>{
+  hoverTl.play();
+})
+hoverDiv.addEventListener('mouseleave',()=>{
+  hoverTl.reverse();
+})

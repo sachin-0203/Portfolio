@@ -39,7 +39,7 @@
       <ul>
         <li><a class="#" href="#home">home</a></li>
         <li><a class="#" href="#about">about</a></li>
-        <li><a class="#" href="#services">service</a></li>
+        <li><a class="#" href="#skills">skills</a></li>
         <li><a class="#" href="#project">Project</a></li>
         <li><a class="#" href="#contact">Contact me</a></li>
     </div>
@@ -70,7 +70,7 @@
         <hr>
         <li><a class="link" href="#about">about</a></li>
         <hr>
-        <li><a class="link" href="#services">service</a></li>
+        <li><a class="link" href="#skills">skills</a></li>
         <hr>
         <li><a class="link" href="#project">Project</a></li>
         <hr>
@@ -82,7 +82,7 @@
             <input class="toggle-input" type="checkbox" id="toggle2">
             <div class="display">
               <label for="toggle2">
-                <div class="circle">
+                <div class="circle-mini">
                 </div>
               </label>
             </div>
@@ -94,7 +94,9 @@
     </div>
   </div>
   </div>
-  <button id="backToTop" onclick="scrollToTop()" class="moveTop"><i class="fa-solid fa-arrow-up"></i></button>
+  <button id="backToTop" onclick="scrollToTop()" class="moveTop">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
 
   <div id="home">
@@ -103,7 +105,7 @@
       <ul>
         <li><a style="color:rgb(96, 96, 217)" href="#home">Home</a></li>
         <li><a class="#" href="#about">about</a></li>
-        <li><a class="#" href="#services">service</a></li>
+        <li><a class="#" href="#skills">skills</a></li>
         <li><a class="#" href="#project">Project</a></li>
         <li><a class="#" href="#contact">Contact me</a></li>
       </ul>
@@ -111,7 +113,7 @@
     <div class="home-container">
       <div class="home-text">
         <div class="home-data">
-          <svg height="auto" width="100%" viewBox="0 0 800 150">
+          <svg height="100%" width="100%" viewBox="0 0 800 150">
             <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" class="stroke">
               <tspan class="letter">S</tspan>
               <tspan class="letter">a</tspan>
@@ -135,18 +137,18 @@
               </div>
             </div>
           </button>
-          <a href="/public/cv-template.pdf" download><button class="btn cv-btn1">
-              <div class="btn-text">
-                get cv
-              </div>
+          <a href="/public/SachinCv.pdf" download>
+            <button class="btn cv-btn1">
+              <div class="btn-text">get cv</div>
               <div class="btn-icon">
                 <i class="fa-solid fa-download"></i>
               </div>
-            </button></a>
+            </button>
+          </a>
         </div>
       </div>
       <div class="home-logo">
-        <img src="/public/home-right.png.webp" alt="">
+        <img src="/public/home-right.png.webp" >
       </div>
     </div>
   </div>
@@ -154,42 +156,33 @@
   <div id="about" class="section">
     <div class="about-row-one">
       <div class="col-1">
-        <img src="/public/about-pic.png" alt="">
+        <img src="/public/about-pic.png" >
       </div>
       <div class="col-2">
-        <div class="primary-heading col2-heading">
-          <h1>let’s</h1>
-          <h1>Introduce about</h1>
-          <h1> myself</h1>
+        <div class="main-heading col2-heading">Who I am</div>
+        <div class="about-text">
+          <p>
+            Hello! I'm Sachin Kumar Gola, a dedicated and innovative 4th-year BTech student with a focus on Computer
+            Science. Throughout my academic journey at Anand Engineering College, I am developing a strong foundation in
+            Software Development, Frontend Development.
+          </p>
+          <p>
+            I am proficient in a variety of programming languages and technologies, including C, C++, JavaScript,
+            HTML/CSS, Data Structure and Algorithm . My experience spans developing interactive web pages.
+          </p>
+        
         </div>
-        <div class="small-heading">
-          <h2>let’s Introduce about myself </h2>
-        </div>
-        <p class="about-text">
-          Hello! I'm Sachin Kumar Gola, a dedicated and innovative 4th-year BTech student with a focus on Computer
-          Science. Throughout my academic journey at Anand Engineering College, I am developing a strong foundation in
-          Software Development, Frontend Development.
-        </p>
-        <p class="about-text">
-          I am proficient in a variety of programming languages and technologies, including C, C++, JavaScript,
-          HTML/CSS, Data Structure and Algorithm . My experience spans developing interactive web pages.
-        </p>
-
-        <a href="/public/cv-template.pdf" download>
-          <button class="btn cv-btn2">
-            <div class="btn-text">
-              Download cv
-            </div>
-            <div class="btn-icon">
-              <i class="fa-solid fa-download"></i>
-            </div>
-          </button>
+        <a class="download-link" href="/public/SachinCv.pdf" download>
+          <div class="hover-parent">
+            <div class=" hover-clr "></div>
+            <span class="hover-text">Download CV</span>
+            <i class="fa-solid fa-download hover-icon"></i>
+          </div>
         </a>
       </div>
     </div>
 
     <div class="about-row-two">
-
       <div class="container-items item1">
         <h1 class="each-tabs">
           <div class="primary-heading tab-title">
@@ -252,44 +245,62 @@
         </ul>
       </div>
     </div>
-    
+
   </div>
 
-  <div id="services">
+  <div id="skills">
     <div class="service-container">
 
       <div class="service-row1">
-        <div class="main-heading service-title">skills</div>
+        <div class="main-heading service-title title">skills</div>
       </div>
-
       <div class="service-row2">
-        <div class="service-row2-col">
-          <img src="/public/icon1.png" alt="">
-          <h2>html</h2>
-
+        <div class="slider" style="--width: 200px;--height: 120px;--quantity: 13;--t:20s;">
+          <div class="list">
+            <div class="skill" style="--position: 1"><img src="/public/html.png" > <p>html</p> </div>
+            <div class="skill" style="--position: 2"><img src="/public/css.png" > <p>css</p> </div>
+            <div class="skill" style="--position: 3"><img src="/public/react.png" > <p>react</p> </div>
+            <div class="skill" style="--position: 4"><img src="/public/python.png" > <p>python</p> </div>
+            <div class="skill" style="--position: 5"><img src="/public/Flask.png" > <p>flask</p> </div>
+            <div class="skill" style="--position: 6"><img src="/public/figma.png" > <p>figma</p> </div>
+            <div class="skill" style="--position: 7"><img src="/public/tailwind.png"><p>tailwindcss</p></div>
+            <div class="skill" style="--position: 8"><img src="/public/gsap.png" > <p>gsap</p> </div>
+            <div class="skill" style="--position: 9"><img src="/public/js.png" > <p>javascript</p> </div>
+            <div class="skill" style="--position: 10"><img src="/public/git.png" > <p>git</p> </div>
+            <div class="skill" style="--position: 11"><img src="/public/c.png" > <p>c</p> </div>
+            <div class="skill" style="--position: 12"><img src="/public/cpp.png" > <p>cpp</p> </div>
+            <div class="skill" style="--position: 13"><img src="/public/dsa.png" > <p>dsa</p> </div>
+          </div>
         </div>
-
-        <div class="service-row2-col">
-          <img src="/public/icon2.png" alt="">
-          <h2>React</h2>
-        </div>
-
-        <div class="service-row2-col">
-          <img src="/public/icon3.png" alt="">
-          <h2>c++</h2>
-
+        <div class="slider" style="--width: 200px;--height: 120px;--quantity: 13;--t:20s;">
+          <div class="list">
+            <div class="skill" style="--position: 1"><img src="/public/figma.png" > <p>figma</p> </div>
+            <div class="skill" style="--position: 2"><img src="/public/tailwind.png"><p>tailwindcss</p></div>
+            <div class="skill" style="--position: 3"><img src="/public/gsap.png" > <p>gsap</p> </div>
+            <div class="skill" style="--position: 4"><img src="/public/js.png" > <p>javascript</p> </div>
+            <div class="skill" style="--position: 5"><img src="/public/git.png" > <p>git</p> </div>
+            <div class="skill" style="--position: 6"><img src="/public/c.png" > <p>c</p> </div>
+            <div class="skill" style="--position: 7"><img src="/public/cpp.png" > <p>cpp</p> </div>
+            <div class="skill" style="--position: 8"><img src="/public/dsa.png" > <p>dsa</p> </div>
+            <div class="skill" style="--position: 9"><img src="/public/html.png" > <p>html</p> </div>
+            <div class="skill" style="--position: 10"><img src="/public/css.png" > <p>css</p> </div>
+            <div class="skill" style="--position: 11"><img src="/public/react.png" > <p>react</p> </div>
+            <div class="skill" style="--position: 12"><img src="/public/python.png" > <p>python</p> </div>
+            <div class="skill" style="--position: 13"><img src="/public/Flask.png" > <p>flask</p> </div>
+            
+          </div>
         </div>
       </div>
 
-      <div class="service-row3">
+      <div id="project">
         <div class="row3-title">recently done project</div>
         <div class="row3-items">
           <div class="row3-col">
             <img src="./public/img1.jpg">
             <div class="layer">
-              <h2>web developing</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis eius perferendis laboriosam!</p>
-              <a href="#"><i class="fas fa-external-link-alt"></i></a>
+              <h2>Encodex</h2>
+              <p>Encodex encrypts images using Fernet encryption, generating unique keys for security. Encrypted data and keys are Base64 encoded, ensuring safe storage and seamless decryption.</p>
+              <a href="https://github.com/sachin-0203/Encodex.git" target="_blank"><i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
           <div class="row3-col">
@@ -303,13 +314,13 @@
           <div class="row3-col">
             <img src="./public/img3.jpg">
             <div class="layer">
-              <h2>web design</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus nostrum fugiat molestias?</p>
-              <a href="#"><i class="fas fa-external-link-alt"></i></a>
+              <h2>Myntra-Functional-Clone</h2>
+              <p>Developed a basic yet functional clone of Myntra’s e-commerce website, focusing on UI design and interactive features. The key highlight of the project is the "Add to Bag" functionality, allowing users to add and remove items dynamically.</p>
+              <a href="https://github.com/sachin-0203/Myntra-Functional-Clone.git" target="_blank"><i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
         </div>
-        <a href="project.html" class="about-btn">show more</a>
+        <a href="https://github.com/sachin-0203" class="about-btn" target="_blank">show more</a>
       </div>
     </div>
   </div>
@@ -318,11 +329,11 @@
     <div class="contact-container">
       <div class="contact-row">
         <div class="contact-left">
-          <h1 class="sub-title">CONTACT ME</h1>
-          <p><i class="fa-solid fa-envelope"></i> contact@example.com</p>
-          <p><i class="fa-solid fa-square-phone"></i> 9876543210</p>
+          <h1 class="sub-title main-heading">ping me</h1>
+          <p><i class="fa-solid fa-envelope"></i>sachinprajapti0203@gmail.com </p>
+          <p><i class="fa-solid fa-square-phone"></i>7037075725</p>
           <div class="social-links">
-            <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://facebook.com/"><i class="fa-brands fa-facebook-square"></i></a>
             <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://twitter.com/"><i class="fa-brands fa-twitter-square"></i></a>
             <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
