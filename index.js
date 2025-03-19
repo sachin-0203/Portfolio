@@ -190,16 +190,17 @@ gsap.from('.home-logo', {
 
 // -------About Page
 gsap.from('.col-2 .main-heading, .col-2 .about-text, .col-2 .hover-parent, .container-items',{
+  opacity: 0,
   scrollTrigger: {
     trigger:'.col-2',
-    start: 'top 90%',
+    start: 'top 70%',
   },
   y: (index, target)=>{
     if(target.matches(".main-heading")) return -20;
     if(target.matches(".about-text")) return 50;
     if(target.matches('.hover-parent')) return 20;
   },
-  opacity: 0,
+  
   stagger: 0.5,
   duration: 3,
   ease: 'back.out(1.7)',
