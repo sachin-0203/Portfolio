@@ -253,9 +253,17 @@ function sendEmail(){
 
 document.getElementById("contact_form").addEventListener('submit',function(event){
   event.preventDefault();
+  const button = document.querySelector(".btn-submit i");
   emailjs.sendForm('service_1uvg5f6', 'template_ne1k3wd', this)
   .then(() => {
+
+    button.classList.add("fly");
+      button.addEventListener("animationend", () => {
+        button.classList.remove("fly");
+      }, { once: true });
+      
     alert("✅ Message sent successfully!");
+    this.reset();
   }, (error) => {
     alert("❌ Failed to send message: " + JSON.stringify(error));
   });
