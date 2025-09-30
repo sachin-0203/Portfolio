@@ -1,3 +1,4 @@
+
 gsap.registerPlugin(ScrollTrigger);
 // Dark Mode
 document.addEventListener("DOMContentLoaded", function () {
@@ -103,23 +104,25 @@ function scrollToTop() {
 };
 
 
-const boxes = document.querySelectorAll(".container-items");
+const boxes = document.querySelectorAll(".each-tabs");
 
 // about section boxes
 boxes.forEach((box, index) => {
   box.addEventListener("click", () => {    
-    toggleIcon(index);
+    toggleIcon(box,index);
   });
 });
 
-function toggleIcon(index) {
+function toggleIcon(box,index) {
   const eachCheckox = document.querySelectorAll('.plus')
   eachCheckox.forEach((checkbox, i)=>{
     if(i === index){
       checkbox.checked = !checkbox.checked;
+      box.style.maxHeight = box.ScrollHeight + "px"; 
     }
     else{
       checkbox.checked = false;
+      box.style.maxHeight = null;
     }
   })
 }
@@ -226,3 +229,34 @@ hoverDiv.addEventListener("mouseenter", ()=>{
 hoverDiv.addEventListener('mouseleave',()=>{
   hoverTl.reverse();
 })
+
+// hire me button function
+
+function sendEmail(){
+  const receiver = "sachinprajapati0203@gmail.com";
+  const subject = "Job Opportunity - Portfolio Contact";
+  const body = `Hello,
+    I came across your portfolio and I’m interested in discussing a job opportunity with you.
+
+    Looking forward to your response.
+
+    Best regards,
+    [Enter your name here]`;
+
+  const mailtoLink = `mailto:${receiver}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = mailtoLink;
+}
+
+(function(){
+  emailjs.init("ozKGDyQ4-q9_Z0kA8");
+})();
+
+document.getElementById("contact_form").addEventListener('submit',function(event){
+  event.preventDefault();
+  emailjs.sendForm('service_1uvg5f6', 'template_ne1k3wd', this)
+  .then(() => {
+    alert("✅ Message sent successfully!");
+  }, (error) => {
+    alert("❌ Failed to send message: " + JSON.stringify(error));
+  });
+});

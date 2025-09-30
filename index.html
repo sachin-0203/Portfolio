@@ -6,14 +6,15 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYVJNQE88Y"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-  
+
     gtag('config', 'G-VYVJNQE88Y');
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Sachin Kumar Gola, showcasing web development, frontend projects, and software skills.">
+  <meta name="description"
+    content="Portfolio of Sachin Kumar Gola, showcasing web development, frontend projects, and software skills.">
 
   <title>Personal Portfolio</title>
 
@@ -45,7 +46,7 @@
   <nav>
     <div class="first">
       <h3>
-          <span>S</span>achin
+        <span>S</span>achin
       </h3>
     </div>
     <div class="second">
@@ -124,6 +125,7 @@
       </ul>
     </nav2>
     <div class="home-container">
+      
       <div class="home-text">
         <div class="home-data">
           <svg height="100%" width="100%" viewBox="0 0 800 150">
@@ -142,7 +144,7 @@
           </div>
         </div>
         <div class="home-btn">
-          <button class="btn hire-btn">
+          <button class="btn hire-btn" onclick="sendEmail()">
             <div class="hire-div">
               <div class="hire-h">hire me</div>
               <div class="hire-icon">
@@ -150,7 +152,7 @@
               </div>
             </div>
           </button>
-          <a href="./assets/SachinCv.pdf" download>
+          <a href="./assets/Sachin_Kumar_Gola_Web_Developer_Resume.pdf" download>
             <button class="btn cv-btn1">
               <div class="btn-text">get cv</div>
               <div class="btn-icon">
@@ -169,23 +171,24 @@
   <div id="about" class="section">
     <div class="about-row-one">
       <div class="col-1">
-        <img alt="About Section Image" src="./assets/about-pic.png" loading="lazy" >
+        <img alt="About Section Image" src="./assets/me.png" loading="lazy">
       </div>
       <div class="col-2">
         <div class="main-heading col2-heading">Who I am</div>
         <div class="about-text">
           <p>
-            Hello! I'm Sachin Kumar Gola, a dedicated and innovative 4th-year BTech student with a focus on Computer
-            Science. Throughout my academic journey at Anand Engineering College, I am developing a strong foundation in
-            Software Development, Frontend Development.
+            Hello! I’m Sachin Kumar Gola, a passionate Frontend Developer with a strong foundation in React.js,
+            JavaScript (ES6+), and responsive UI/UX design.
+            I enjoy building scalable, user-friendly, and visually engaging applications while continuously exploring
+            new technologies to sharpen my skills.
           </p>
           <p>
             I am proficient in a variety of programming languages and technologies, including C, C++, JavaScript,
             HTML/CSS, Data Structure and Algorithm . My experience spans developing interactive web pages.
           </p>
-        
+
         </div>
-        <a class="download-link" href="./assets/SachinCv.pdf" download>
+        <a class="download-link" href="./assets/Sachin_Kumar_Gola_Web_Developer_Resume.pdf" download>
           <div class="hover-parent">
             <div class=" hover-clr "></div>
             <span class="hover-text">Download CV</span>
@@ -208,13 +211,30 @@
             </label>
           </div>
         </h1>
-        <p class="tab-content inner-text">
-          I'm Sachin Kumar Gola, a passionate and driven 4th-year BTech student specializing in Computer Science. I
-          have
-          completed multiple projects that demonstrate my skills in front-end development. I am eager to apply my
-          knowledge to innovative and impactful projects and collaborate with like-minded professionals to create
-          meaningful solutions.
-        </p>
+        <div class="tab-content inner-text">
+          <p>
+            I am a Computer Science graduate from Anand Engineering College (2025) with hands-on experience in modern frontend development. My expertise lies in :
+          </p>
+            <p>
+              <i class="fa-brands fa-react"></i> Building interactive and responsive web applications using React.js, JavaScript, TailwindCSS, and Bootstrap.
+            </p>
+            <p>
+              <i class="fa-brands fa-figma"></i>
+              Translating Figma wireframes into functional UIs while focusing on performance, accessibility, and user experience.
+            </p>
+            <p>
+              <i class="fa-brands fa-creative-commons-sa"></i>
+              Implementing animations and smooth interactions with GSAP to enhance user engagement.
+            </p>
+            <p>
+              <i class="fa-brands fa-node"></i>
+              Working with REST APIs and exploring backend concepts using Python (Flask) and Node.js.
+            </p>
+            <p>
+              <i class="fa-solid fa-terminal"></i>
+              Deployed 3+ frontend projects on GitHub, showcasing my ability to turn ideas into real-world applications. With strong problem-solving skills, adaptability, and collaborative mindset, I am eager to contribute to innovative projects and grow as a versatile software engineer.
+            </p>
+          </div>
       </div>
 
       <div class="container-items item2">
@@ -229,12 +249,21 @@
             </label>
           </div>
         </h1>
-        <ul class="tab-content inner-text ">
-          <li>Btech in Computer Science</li>
-          <li>from Anand Engineering College</li>
-          <li>12 <sup>th</sup> from Saraswati Vidya Mandir</li>
-          <li>10 <sup>th</sup> from Saraswati Vidya Mandir</li>
-        </ul>
+        <div class="tab-content inner-text ">
+          <p>
+            <i class="fa-solid fa-graduation-cap"></i>
+            Btech in Computer Science 
+            from    Anand Engineering College
+          </p>
+          <p>
+            <i class="fa-solid fa-graduation-cap"></i>
+            12 <sup>th</sup> from Saraswati Vidya Mandir
+          </p>
+          <p>
+            <i class="fa-solid fa-graduation-cap"></i>
+            10 <sup>th</sup> from Saraswati Vidya Mandir
+          </p>
+        </div>
       </div>
 
       <div class="container-items item3">
@@ -249,13 +278,41 @@
             </label>
           </div>
         </h1>
-        <ul class="tab-content inner-text">
-          <li>Name: Sachin Kumar Gola</li>
-          <li>DOB: 02/03/2002 </li>
-          <li>City: Agra</li>
-          <li>Language: Hindi , English</li>
-          <li>Mail: sachinprajapti0203@gmail.com</li>
-        </ul>
+        <div class="tab-content inner-text">
+          <p>
+            <i class="fa-solid fa-user-tie"></i>
+             Sachin Kumar Gola
+          </p>
+          <p>
+            <i class="fa-solid fa-envelope"></i>
+             sachinprajapti0203@gmail.com
+          </p>
+          <p>
+            <i class="fa-solid fa-map-pin"></i>
+            Noida
+          </p>
+          <p>
+            <i class="fa-brands fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/sachin-kumar-gola" target="_blank">
+              LinkedIn
+            </a>
+            
+          </p>
+          <p>
+            <i class="fa-brands fa-square-github"></i>
+            <a href="https://github.com/sachin-0203" target="_blank">
+              GitHub
+            </a>
+            
+          </p>
+          <p>
+            <i class="fa-solid fa-code"></i>
+            <a href="https://leetcode.com/u/_Saar_/" target="_blank">
+              Leetcode
+            </a>
+            
+          </p>
+        </div>
       </div>
     </div>
 
@@ -270,37 +327,89 @@
       <div class="service-row2">
         <div class="slider" style="--width: 200px;--height: 120px;--quantity: 13;--t:20s;">
           <div class="list">
-            <div class="skill" style="--position: 1"><img src="./assets/html.png" > <p>html</p> </div>
-            <div class="skill" style="--position: 2"><img src="./assets/css.png" > <p>css</p> </div>
-            <div class="skill" style="--position: 3"><img src="./assets/react.png" > <p>react</p> </div>
-            <div class="skill" style="--position: 4"><img src="./assets/python.png" > <p>python</p> </div>
-            <div class="skill" style="--position: 5"><img src="./assets/Flask.png" > <p>flask</p> </div>
-            <div class="skill" style="--position: 6"><img src="./assets/figma.png" > <p>figma</p> </div>
-            <div class="skill" style="--position: 7"><img src="./assets/tailwind.png"><p>tailwindcss</p></div>
-            <div class="skill" style="--position: 8"><img src="./assets/gsap.png" > <p>gsap</p> </div>
-            <div class="skill" style="--position: 9"><img src="./assets/js.png" > <p>javascript</p> </div>
-            <div class="skill" style="--position: 10"><img src="./assets/git.png" > <p>git</p> </div>
-            <div class="skill" style="--position: 11"><img src="./assets/c.png" > <p>c</p> </div>
-            <div class="skill" style="--position: 12"><img src="./assets/cpp.png" > <p>cpp</p> </div>
-            <div class="skill" style="--position: 13"><img src="./assets/dsa.png" > <p>dsa</p> </div>
+            <div class="skill" style="--position: 1"><img src="./assets/html.png">
+              <p>html</p>
+            </div>
+            <div class="skill" style="--position: 2"><img src="./assets/css.png">
+              <p>css</p>
+            </div>
+            <div class="skill" style="--position: 3"><img src="./assets/react.png">
+              <p>react</p>
+            </div>
+            <div class="skill" style="--position: 4"><img src="./assets/python.png">
+              <p>python</p>
+            </div>
+            <div class="skill" style="--position: 5"><img src="./assets/Flask.png">
+              <p>flask</p>
+            </div>
+            <div class="skill" style="--position: 6"><img src="./assets/figma.png">
+              <p>figma</p>
+            </div>
+            <div class="skill" style="--position: 7"><img src="./assets/tailwind.png">
+              <p>tailwindcss</p>
+            </div>
+            <div class="skill" style="--position: 8"><img src="./assets/gsap.png">
+              <p>gsap</p>
+            </div>
+            <div class="skill" style="--position: 9"><img src="./assets/js.png">
+              <p>javascript</p>
+            </div>
+            <div class="skill" style="--position: 10"><img src="./assets/git.png">
+              <p>git</p>
+            </div>
+            <div class="skill" style="--position: 11"><img src="./assets/c.png">
+              <p>c</p>
+            </div>
+            <div class="skill" style="--position: 12"><img src="./assets/cpp.png">
+              <p>cpp</p>
+            </div>
+            <div class="skill" style="--position: 13"><img src="./assets/dsa.png">
+              <p>dsa</p>
+            </div>
           </div>
         </div>
         <div class="slider" style="--width: 200px;--height: 120px;--quantity: 13;--t:20s;">
           <div class="list">
-            <div class="skill" style="--position: 1"><img src="./assets/figma.png" > <p>figma</p> </div>
-            <div class="skill" style="--position: 2"><img src="./assets/tailwind.png"><p>tailwindcss</p></div>
-            <div class="skill" style="--position: 3"><img src="./assets/gsap.png" > <p>gsap</p> </div>
-            <div class="skill" style="--position: 4"><img src="./assets/js.png" > <p>javascript</p> </div>
-            <div class="skill" style="--position: 5"><img src="./assets/git.png" > <p>git</p> </div>
-            <div class="skill" style="--position: 6"><img src="./assets/c.png" > <p>c</p> </div>
-            <div class="skill" style="--position: 7"><img src="./assets/cpp.png" > <p>cpp</p> </div>
-            <div class="skill" style="--position: 8"><img src="./assets/dsa.png" > <p>dsa</p> </div>
-            <div class="skill" style="--position: 9"><img src="./assets/html.png" > <p>html</p> </div>
-            <div class="skill" style="--position: 10"><img src="./assets/css.png" > <p>css</p> </div>
-            <div class="skill" style="--position: 11"><img src="./assets/react.png" > <p>react</p> </div>
-            <div class="skill" style="--position: 12"><img src="./assets/python.png" > <p>python</p> </div>
-            <div class="skill" style="--position: 13"><img src="./assets/Flask.png" > <p>flask</p> </div>
-            
+            <div class="skill" style="--position: 1"><img src="./assets/figma.png">
+              <p>figma</p>
+            </div>
+            <div class="skill" style="--position: 2"><img src="./assets/tailwind.png">
+              <p>tailwindcss</p>
+            </div>
+            <div class="skill" style="--position: 3"><img src="./assets/gsap.png">
+              <p>gsap</p>
+            </div>
+            <div class="skill" style="--position: 4"><img src="./assets/js.png">
+              <p>javascript</p>
+            </div>
+            <div class="skill" style="--position: 5"><img src="./assets/git.png">
+              <p>git</p>
+            </div>
+            <div class="skill" style="--position: 6"><img src="./assets/c.png">
+              <p>c</p>
+            </div>
+            <div class="skill" style="--position: 7"><img src="./assets/cpp.png">
+              <p>cpp</p>
+            </div>
+            <div class="skill" style="--position: 8"><img src="./assets/dsa.png">
+              <p>dsa</p>
+            </div>
+            <div class="skill" style="--position: 9"><img src="./assets/html.png">
+              <p>html</p>
+            </div>
+            <div class="skill" style="--position: 10"><img src="./assets/css.png">
+              <p>css</p>
+            </div>
+            <div class="skill" style="--position: 11"><img src="./assets/react.png">
+              <p>react</p>
+            </div>
+            <div class="skill" style="--position: 12"><img src="./assets/python.png">
+              <p>python</p>
+            </div>
+            <div class="skill" style="--position: 13"><img src="./assets/Flask.png">
+              <p>flask</p>
+            </div>
+
           </div>
         </div>
       </div>
@@ -312,8 +421,9 @@
             <img alt="Card Background Image" src="./assets/img1.jpg" loading="lazy">
             <div class="layer">
               <h2>Encodex</h2>
-              <p>Encodex encrypts images using Fernet encryption, generating unique keys for security. Encrypted data and keys are Base64 encoded, ensuring safe storage and seamless decryption.</p>
-              <a href="https://github.com/sachin-0203/Encodex.git" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+              <p>An Image Encryption and Decryption System</p>
+              <a href="https://encodexx.netlify.app/" target="_blank"><i
+                  class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
           <div class="row3-col">
@@ -328,8 +438,9 @@
             <img alt="Card Background Image" src="./assets/img3.jpg" loading="lazy">
             <div class="layer">
               <h2>Myntra-Functional-Clone</h2>
-              <p>Developed a basic yet functional clone of Myntra’s e-commerce website, focusing on UI design and interactive features. The key highlight of the project is the "Add to Bag" functionality, allowing users to add and remove items dynamically.</p>
-              <a href="https://github.com/sachin-0203/Myntra-Functional-Clone.git" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+              <p>Developed a basic yet functional clone of Myntra’s e-commerce website, focusing on UI design and interactive features.</p>
+              <a href="https://github.com/sachin-0203/Myntra-Functional-Clone.git" target="_blank"><i
+                  class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
         </div>
@@ -346,19 +457,19 @@
           <p><i class="fa-solid fa-envelope"></i>sachinprajapti0203@gmail.com </p>
           <p><i class="fa-solid fa-square-phone"></i>7037075725</p>
           <div class="social-links">
-            <a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook-square"></i></a>
-            <a href="https://instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>
             <a href="https://linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
           </div>
         </div>
 
         <div class="contact-right">
-          <form>
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-            <button aria-label="submit the form" type="submit" class="btn btn-submit">submit <i class="fa-solid fa-paper-plane"></i></button>
+          <form id="contact_form">
+            <input type="text" name="from_name" placeholder="Your Name" required>
+            <input type="email" name="reply_to" placeholder="Your Email" required>
+            <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+            <button aria-label="submit the form" type="submit" class="btn btn-submit">submit <i
+              class="fa-solid fa-paper-plane"></i>
+            </button>
           </form>
         </div>
       </div>
@@ -368,6 +479,7 @@
   <footer>
     Made with ❤️ by Sachin
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script>
     (function () {
       const savedTheme = localStorage.getItem("theme") || "light";
