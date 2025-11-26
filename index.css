@@ -987,11 +987,165 @@ nav2 ul li a:hover::after {
   border: 1px solid violet;
   border-radius: 10px;
   box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
-  transition: background-color 0.5s;
+  transition: all 0.5s;
 }
 .about-btn:hover{
   background-color: rgb(115, 0, 255);
 }
+.about-btn:active{
+  scale: 0.95;
+}
+
+#more{
+  color: white;
+}
+#show-more-checkbox{
+  display: none;
+}
+.project-popup-container{
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 5rem;
+  left: 2em;
+  opacity: 0;
+  height: auto;
+  width: 90%;
+  max-width: 1200px;
+  background: rgb(28, 57, 100);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: all 2s;
+}
+#show-more-checkbox:checked ~ .project-popup-container{
+  display: block;
+  opacity:90%;
+}
+.popup-tab{
+  position: relative;
+}
+.popup-cross{
+  position: absolute;
+  right: 5px;
+  top: 2px;
+  cursor: pointer;
+}
+.popup-cross:hover{
+  scale: 0.9;
+}
+.popup-title{
+  font-size: large;
+  font-weight: 500;
+  margin: 5px;
+}
+.popup-project{
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  margin: 8px;
+}
+.project{
+  border-bottom: 1px solid black;
+  /* height: 2.5rem; */
+  padding-inline: 5px;
+  padding-block: 1px;
+  border-radius: 2px;
+  position: relative;
+  margin: 2px ;
+
+}
+.project:hover{
+  border-bottom: 1px solid gray;
+}
+.project-heading{
+  padding-top: 5px;
+  font-size: 20px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.project-heading div{
+  font-size: 15px;
+}
+.project:hover  .hover-overlay{
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.hover-overlay{
+  visibility: hidden;
+  opacity: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+
+  position: absolute;
+  bottom: 10px;
+  right: 2%;
+  transform: translateX(-50%);
+  
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.2);
+
+  /* transform: translateY(-10px) scale(0.95); */
+  transition: all 0.25s ease;
+  animation: float 4s ease-in-out infinite;
+}
+.overlay-image  img{
+  height: 10rem;
+  width: 15rem;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  transition: transform 0.3s ease , box-shadow 0.3s ease ;
+}
+.project:hover .overlay-image img {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+.overlay-text{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 10px;
+
+  color: wheat;
+  padding: 5px 0px; 
+
+  width: 100;
+  transition : trnasform 0.3s ease , opacity 0.3s ease
+}
+
+.overlay-text-link{
+  width: 50%;
+  text-align: center;
+  padding: 5px 0px;
+  background: rgba(255, 255, 255, 0.12);
+
+}
+.overlay-text  a {
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+
+  border-radius: 4px;
+  transition: 0.25s ease;
+}
+
+.overlay-text a:hover{
+  color: gold;
+  background: rgba(255, 255, 255, 0.22);
+  transform: translateY(-2px);
+}
+
 
 /* --------contact-------- */
 #contact{
@@ -1099,6 +1253,12 @@ form textarea{
     transform: translate(0, 0) rotate(0);
     opacity: 1;
   }
+}
+
+@keyframes float {
+  0% { transform: translateY(-10px) scale(0.95); }
+  50% { transform: translateY(-14px) scale(0.97);}
+  100% { transform: translateY(-10px) scale(0.95); }
 }
 
 .fly {
@@ -1272,6 +1432,10 @@ footer{
     font-size: 3rem;
   }
 
+  .project-popup-container{
+    width: 85%;
+  }
+
   #contact{
     padding: 0 0;
   }
@@ -1388,6 +1552,16 @@ footer{
     margin: 50px 0;
     font-size: 35px;
     padding: 0 0;
+  }
+
+  .project-popup-container{
+    width: 78%;
+  }
+  .project-heading{
+    font-size: 18px;
+  }
+  .project-heading div{
+    font-size: 13px;
   }
   /* ---contact--- */
 
@@ -1514,6 +1688,15 @@ footer{
   .tab-content{
     margin-top: 3.5rem;
   }
+
+  .project-heading{
+    padding-top: 5px;
+    font-size: 15px;
+    flex-direction: column;
+  }
+  .project-heading div{
+    font-size: 10px;
+  }
 }
 
 
@@ -1598,5 +1781,10 @@ footer{
   }
   .contact-left p{
     font-size: 0.7rem;
+  }
+
+  
+  .project-popup-container{
+    width: 70%;
   }
 }

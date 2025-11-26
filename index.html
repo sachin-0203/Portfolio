@@ -37,6 +37,7 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
   <script src="index.js" defer></script>
+  <script src="js/project.js"></script>
 </head>
 
 <body>
@@ -325,6 +326,7 @@
         <div class="main-heading service-title title">skills</div>
       </div>
       <div class="service-row2">
+
         <div class="slider" style="--width: 200px;--height: 120px;--quantity: 13;--t:20s;">
           <div class="list">
             <div class="skill" style="--position: 1"><img src="./assets/html.png">
@@ -368,6 +370,7 @@
             </div>
           </div>
         </div>
+
         <div class="slider" style="--width: 200px;--height: 120px;--quantity: 13;--t:20s;">
           <div class="list">
             <div class="skill" style="--position: 1"><img src="./assets/figma.png">
@@ -412,42 +415,42 @@
 
           </div>
         </div>
+      
       </div>
 
       <div id="project">
-        <div class="row3-title">recently done project</div>
-        <div class="row3-items">
-          <div class="row3-col">
-            <img alt="Card Background Image" src="./assets/img1.jpg" loading="lazy">
-            <div class="layer">
-              <h2>Encodex</h2>
-              <p>An Image Encryption and Decryption System</p>
-              <a href="https://encodexx.netlify.app/" target="_blank"><i
-                  class="fas fa-external-link-alt"></i></a>
+
+        <div class="row3-title"> recently done project </div>
+        <div id="mainProjectsContainer" class="row3-items">
+        </div>
+
+        <div id="more">
+          <label id="check" for="show-more-checkbox" class="about-btn">
+            show more
+          </label>
+          <input type="checkbox" id="show-more-checkbox" class="show-more">
+
+          <div  class="project-popup-container">
+
+            <div class="popup-tab" >
+              <div class="popup-cross">
+                <i class="fa-solid fa-x"></i>
+              </div>
             </div>
-          </div>
-          <div class="row3-col">
-            <img alt="Card Background Image" src="./assets/img2.jpg" loading="lazy">
-            <div class="layer">
-              <h2>Figma UI Design Showcase</h2>
-              <p>A modern, responsive UI crafted in Figma with clean layouts, intuitive interactions, and consistent design elements.</p>
-              <a href="https://www.figma.com/design/iXXrNtAKA1bDr0wbYKODYv/StudyBook-Project?t=znH8iov0lwNJHLrw-1"><i class="fas fa-external-link-alt"></i></a>
+
+            <div class="popup-title">
+              More Project on react
             </div>
-          </div>
-          <div class="row3-col">
-            <img alt="Card Background Image" src="./assets/img3.jpg" loading="lazy">
-            <div class="layer">
-              <h2>Myntra-Functional-Clone</h2>
-              <p>Developed a basic yet functional clone of Myntra’s e-commerce website, focusing on UI design and interactive features.</p>
-              <a href="https://sachin-0203.github.io/Myntra-Functional-Clone/" target="_blank"><i
-                  class="fas fa-external-link-alt"></i></a>
+
+            <div id="secondaryProjectContainer" class="popup-project">
             </div>
           </div>
         </div>
-        <a href="https://github.com/sachin-0203" class="about-btn" target="_blank">show more</a>
-      </div>
+
+      </div> 
     </div>
   </div>
+
 
   <div id="contact">
     <div class="contact-container">

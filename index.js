@@ -1,3 +1,59 @@
+const container = document.getElementById("mainProjectsContainer");
+
+mainProject.forEach(project => {
+  const imgSrc =
+    project.id === "figma"
+      ? "./assets/img2.jpg"
+      : `https://image.thum.io/get/width/800/${project.link}`;
+
+  container.innerHTML += `
+    <div class="row3-col">
+      <img id="${project.id}Image" src="${imgSrc}" alt="Card Background Image" loading="lazy">
+
+      <div class="layer">
+        <h2>${project.title}</h2>
+        <p>${project.p}</p>
+        <a href="${project.link}" target="_blank">
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  `;
+});
+
+const secContainer = document.getElementById('secondaryProjectContainer');
+
+secondaryProject.forEach( project => {
+  const imgSrc =  `https://image.thum.io/get/width/400/${project.live}`;
+
+  secContainer.innerHTML += `
+    <div class="project" >
+
+      <div class="project-heading" >
+        ${project.title}: <div> ${project.tech}</div>
+      </div>
+
+      <div class="hover-overlay">
+
+        <div class="overlay-image">
+          <img src="${imgSrc}" alt="project-image">
+        </div>
+
+        <div class="overlay-text">
+          <a class="overlay-text-link" href="${project.live}" target="_blank">
+            Live
+          </a>
+
+          <a class="overlay-text-link" href=" ${project.code} " target="_blank">
+            Code
+          </a>
+        </div>
+
+      </div>
+    </div>
+  `;
+});
+
 
 gsap.registerPlugin(ScrollTrigger);
 // Dark Mode
@@ -267,4 +323,23 @@ document.getElementById("contact_form").addEventListener('submit',function(event
   }, (error) => {
     alert("❌ Failed to send message: " + JSON.stringify(error));
   });
+});
+
+
+const projectPopup = document.querySelector('#show-more-checkbox')
+const popupContainer = document.querySelector('.project-popup-container')
+const popupCross = document.querySelector('.popup-cross');
+
+popupCross.addEventListener("click", () => {
+  projectPopup.checked = !projectPopup.checked
+})
+
+document.addEventListener("click", (e) => {
+  if (
+    projectPopup.checked &&
+    !popupContainer.contains(e.target) &&
+    e.target !== projectPopup
+  ) {
+    projectPopup.checked = false;
+  }
 });
