@@ -25,19 +25,19 @@ const secondaryProject = [
   {
     title : "UserExplorer",
     tech : "Advanced Redux Async Project",
-    live : "https://user-fetch-app.netlify.app",
+    live : "https://userfetchapp.netlify.app",
     code : "https://github.com/react-min-projects/09userFetcher"
   },
   {
     title : "StateSync",
     tech : "Redux Counter with API Fetch Project",
-    live : "https://redu-x-counter.netlify.app",
+    live : "https://basicreduxcounter.netlify.app",
     code : "https://github.com/react-min-projects/08reduxCounter"
   },
   {
     title : "TaskFlow",
     tech : "Redux To-Do Project",
-    live : "https://redu-x-todo.netlify.app",
+    live : "https://beingtodo.netlify.app",
     code : "https://github.com/react-min-projects/07reduxToDo"
   },
   {
@@ -49,19 +49,19 @@ const secondaryProject = [
   {
     title : "Basic Routing in React",
     tech : "Navigation Practice Project",
-    live : "https://routin-g-app.netlify.app",
+    live : "https://basicroutingapp.netlify.app",
     code : "https://github.com/react-min-projects/05routing"
   },
   {
     title : "Password Generator",
     tech : "Advanced React Hooks Project",
-    live : "https://passwor-generator-app.netlify.app",
+    live : "https://hypasswordgenerator.netlify.app",
     code : "https://github.com/react-min-projects/03passwordGenerator"
   },
   {
     title : "Dynamic Bg Changer",
     tech : "Basic React Hooks Project",
-    live : "https://bg-change-app.netlify.app",
+    live : "https://bgchangeapp.netlify.app",
     code : "https://github.com/react-min-projects/02bgChanger"
   },
 ]
