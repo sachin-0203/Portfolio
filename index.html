@@ -1,13 +1,494 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYVJNQE88Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-VYVJNQE88Y');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Portfolio of Sachin Kumar Gola, showcasing web development, frontend projects, and software skills.">
+
+  <title>Personal Portfolio</title>
+
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://kit.fontawesome.com/66c8ec78ff.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+  <script src="./js/project.js" defer></script>
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <div class="welcome-parent">
+    <h1 class="welcome-child">Welcome</h1>
+  </div>
+  <nav>
+    <div class="first">
+      <h3>
+        <span>S</span>achin
+      </h3>
+    </div>
+    <div class="second">
+      <ul>
+        <li><a class="nav-link" href="#home" aria-label="Go to home page">Home</a></li>
+        <li><a class="nav-link" href="#about">about</a></li>
+        <li><a class="nav-link" href="#skills">skills</a></li>
+        <li><a class="nav-link" href="#project">Project</a></li>
+        <li><a class="nav-link" href="#contact">Contact me</a></li>
+    </div>
+    </ul>
+    <div class="toggler-div">
+      <input class="toggle-input" type="checkbox" id="toggle">
+      <div class="display">
+        <label for="toggle" class="toggle-label">
+          <div class="circle">
+          </div>
+        </label>
+      </div>
+    </div>
+  </nav>
+
+  <div class="minibar">
+    <div class="minibar-row1">
+      <div>
+        <h3><span>S</span>achin</h3>
+      </div>
+      <button aria-label="Open dropdown menu" class="toggle-btn"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+  <div class="minibar-row2">
+    <div class="dropdown-nav">
+      <div class="links">
+        <li><a class="link" href="#">home</a></li>
+        <hr>
+        <li><a class="link" href="#about">about</a></li>
+        <hr>
+        <li><a class="link" href="#skills">skills</a></li>
+        <hr>
+        <li><a class="link" href="#project">Project</a></li>
+        <hr>
+        <li><a class="link" href="#contact">Contact</a></li>
+        <hr>
+        <div class="theme-div-mini">
+          <p class="theme-mode-h"></p>
+          <div class="toggler-div">
+            <input class="toggle-input" type="checkbox" id="toggle2">
+            <div class="display">
+              <label for="toggle2">
+                <div class="circle-mini">
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+        <hr>
+      </div>
+
+    </div>
+  </div>
+  </div>
+  <button aria-label="Move to Top button" id="backToTop" onclick="scrollToTop()" class="moveTop">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+
+  <div id="home">
+    <nav2>
+      <h2>Porfolio <span style="color:rgb(96, 96, 217) ;">.</span> </h2>
+      <ul>
+        <li><a style="color:rgb(96, 96, 217)" href="#home">Home</a></li>
+        <li><a class="#" href="#about">about</a></li>
+        <li><a class="#" href="#skills">skills</a></li>
+        <li><a class="#" href="#project">Project</a></li>
+        <li><a class="#" href="#contact">Contact me</a></li>
+      </ul>
+    </nav2>
+    <div class="home-container">
+      
+      <div class="home-text">
+        <div class="home-data">
+          <svg height="100%" width="100%" viewBox="0 0 800 150">
+            <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" class="stroke">
+              <tspan class="letter">S</tspan>
+              <tspan class="letter">a</tspan>
+              <tspan class="letter">c</tspan>
+              <tspan class="letter">h</tspan>
+              <tspan class="letter">i</tspan>
+              <tspan class="letter">n</tspan>
+            </text>
+          </svg>
+          <div class="surname center-text">kumar gola</div>
+          <div class="marquee">
+            <p>welcome to my portfolio</p>
+          </div>
+        </div>
+        <div class="home-btn">
+          <button class="btn hire-btn" onclick="sendEmail()">
+            <div class="hire-div">
+              <div class="hire-h">hire me</div>
+              <div class="hire-icon">
+                <i class="fa-regular fa-handshake"></i>
+              </div>
+            </div>
+          </button>
+          <a href="./assets/Sachin_Kumar_Gola_Web_Developer_Resume.pdf" download>
+            <button class="btn cv-btn1">
+              <div class="btn-text">get cv</div>
+              <div class="btn-icon">
+                <i class="fa-solid fa-download"></i>
+              </div>
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="home-logo">
+        <img alt="Hero Section Image" src="./assets/home-right.png">
+      </div>
+    </div>
+  </div>
+
+  <div id="about" class="section">
+    <div class="about-row-one">
+      <div class="col-1">
+        <img alt="About Section Image" src="./assets/me.png" loading="lazy">
+      </div>
+      <div class="col-2">
+        <div class="main-heading col2-heading">Who I am</div>
+        <div class="about-text">
+          <p>
+            Hello! I’m Sachin Kumar Gola, a passionate Frontend Developer with a strong foundation in React.js,
+            JavaScript (ES6+), and responsive UI/UX design.
+            I enjoy building scalable, user-friendly, and visually engaging applications while continuously exploring
+            new technologies to sharpen my skills.
+          </p>
+          <p>
+            I am proficient in a variety of programming languages and technologies, including C, C++, JavaScript,
+            HTML/CSS, Data Structure and Algorithm . My experience spans developing interactive web pages.
+          </p>
+
+        </div>
+        <a class="download-link" href="./assets/Sachin_Kumar_Gola_Web_Developer_Resume.pdf" download>
+          <div class="hover-parent">
+            <div class=" hover-clr "></div>
+            <span class="hover-text">Download CV</span>
+            <i class="fa-solid fa-download hover-icon"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="about-row-two">
+      <div class="container-items item1">
+        <h1 class="each-tabs">
+          <div class="primary-heading tab-title">
+            brief Introduction
+          </div>
+          <div class="tab-icon">
+            <input type="checkbox" class="plus" id="plus1" hidden>
+            <label for="plus1" class="plus-label">
+              <i class="fa-regular fa-plus add"></i>
+            </label>
+          </div>
+        </h1>
+        <div class="tab-content inner-text">
+          <p>
+            I am a Computer Science graduate from Anand Engineering College (2025) with hands-on experience in modern frontend development. My expertise lies in :
+          </p>
+            <p>
+              <i class="fa-brands fa-react"></i> Building interactive and responsive web applications using React.js, JavaScript, TailwindCSS, and Bootstrap.
+            </p>
+            <p>
+              <i class="fa-brands fa-figma"></i>
+              Translating Figma wireframes into functional UIs while focusing on performance, accessibility, and user experience.
+            </p>
+            <p>
+              <i class="fa-brands fa-creative-commons-sa"></i>
+              Implementing animations and smooth interactions with GSAP to enhance user engagement.
+            </p>
+            <p>
+              <i class="fa-brands fa-node"></i>
+              Working with REST APIs and exploring backend concepts using Python (Flask) and Node.js.
+            </p>
+            <p>
+              <i class="fa-solid fa-terminal"></i>
+              Deployed 3+ frontend projects on GitHub, showcasing my ability to turn ideas into real-world applications. With strong problem-solving skills, adaptability, and collaborative mindset, I am eager to contribute to innovative projects and grow as a versatile software engineer.
+            </p>
+          </div>
+      </div>
+
+      <div class="container-items item2">
+        <h1 class="each-tabs">
+          <div class="primary-heading tab-title">
+            education
+          </div>
+          <div class="tab-icon">
+            <input type="checkbox" class="plus" id="plus2" hidden>
+            <label for="plus2" class="plus-label">
+              <i class="fa-regular fa-plus add"></i>
+            </label>
+          </div>
+        </h1>
+        <div class="tab-content inner-text ">
+          <p>
+            <i class="fa-solid fa-graduation-cap"></i>
+            Btech in Computer Science 
+            from    Anand Engineering College
+          </p>
+          <p>
+            <i class="fa-solid fa-graduation-cap"></i>
+            12 <sup>th</sup> from Saraswati Vidya Mandir
+          </p>
+          <p>
+            <i class="fa-solid fa-graduation-cap"></i>
+            10 <sup>th</sup> from Saraswati Vidya Mandir
+          </p>
+        </div>
+      </div>
+
+      <div class="container-items item3">
+        <h1 class="each-tabs">
+          <div class="primary-heading tab-title">
+            Personal Details
+          </div>
+          <div class="tab-icon">
+            <input type="checkbox" class="plus" id="plus3" hidden>
+            <label for="plus3" class="plus-label">
+              <i class="fa-regular fa-plus add"></i>
+            </label>
+          </div>
+        </h1>
+        <div class="tab-content inner-text">
+          <p>
+            <i class="fa-solid fa-user-tie"></i>
+             Sachin Kumar Gola
+          </p>
+          <p>
+            <i class="fa-solid fa-envelope"></i>
+             sachinprajapti0203@gmail.com
+          </p>
+          <p>
+            <i class="fa-solid fa-map-pin"></i>
+            Noida
+          </p>
+          <p>
+            <i class="fa-brands fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/sachin-kumar-gola" target="_blank">
+              LinkedIn
+            </a>
+            
+          </p>
+          <p>
+            <i class="fa-brands fa-square-github"></i>
+            <a href="https://github.com/sachin-0203" target="_blank">
+              GitHub
+            </a>
+            
+          </p>
+          <p>
+            <i class="fa-solid fa-code"></i>
+            <a href="https://leetcode.com/u/_Saar_/" target="_blank">
+              Leetcode
+            </a>
+            
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="skills">
+    <div class="service-container">
+
+      <div class="service-row1">
+        <div class="main-heading service-title title">skills</div>
+      </div>
+      <div class="service-row2">
+
+        <div class="slider" style="--width: 200px;--height: 120px;--quantity: 13;--t:20s;">
+          <div class="list">
+            <div class="skill" style="--position: 1"><img src="./assets/html.png">
+              <p>html</p>
+            </div>
+            <div class="skill" style="--position: 2"><img src="./assets/css.png">
+              <p>css</p>
+            </div>
+            <div class="skill" style="--position: 3"><img src="./assets/react.png">
+              <p>react</p>
+            </div>
+            <div class="skill" style="--position: 4"><img src="./assets/python.png">
+              <p>python</p>
+            </div>
+            <div class="skill" style="--position: 5"><img src="./assets/Flask.png">
+              <p>flask</p>
+            </div>
+            <div class="skill" style="--position: 6"><img src="./assets/figma.png">
+              <p>figma</p>
+            </div>
+            <div class="skill" style="--position: 7"><img src="./assets/tailwind.png">
+              <p>tailwindcss</p>
+            </div>
+            <div class="skill" style="--position: 8"><img src="./assets/gsap.png">
+              <p>gsap</p>
+            </div>
+            <div class="skill" style="--position: 9"><img src="./assets/js.png">
+              <p>javascript</p>
+            </div>
+            <div class="skill" style="--position: 10"><img src="./assets/git.png">
+              <p>git</p>
+            </div>
+            <div class="skill" style="--position: 11"><img src="./assets/c.png">
+              <p>c</p>
+            </div>
+            <div class="skill" style="--position: 12"><img src="./assets/cpp.png">
+              <p>cpp</p>
+            </div>
+            <div class="skill" style="--position: 13"><img src="./assets/dsa.png">
+              <p>dsa</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider" style="--width: 200px;--height: 120px;--quantity: 13;--t:20s;">
+          <div class="list">
+            <div class="skill" style="--position: 1"><img src="./assets/figma.png">
+              <p>figma</p>
+            </div>
+            <div class="skill" style="--position: 2"><img src="./assets/tailwind.png">
+              <p>tailwindcss</p>
+            </div>
+            <div class="skill" style="--position: 3"><img src="./assets/gsap.png">
+              <p>gsap</p>
+            </div>
+            <div class="skill" style="--position: 4"><img src="./assets/js.png">
+              <p>javascript</p>
+            </div>
+            <div class="skill" style="--position: 5"><img src="./assets/git.png">
+              <p>git</p>
+            </div>
+            <div class="skill" style="--position: 6"><img src="./assets/c.png">
+              <p>c</p>
+            </div>
+            <div class="skill" style="--position: 7"><img src="./assets/cpp.png">
+              <p>cpp</p>
+            </div>
+            <div class="skill" style="--position: 8"><img src="./assets/dsa.png">
+              <p>dsa</p>
+            </div>
+            <div class="skill" style="--position: 9"><img src="./assets/html.png">
+              <p>html</p>
+            </div>
+            <div class="skill" style="--position: 10"><img src="./assets/css.png">
+              <p>css</p>
+            </div>
+            <div class="skill" style="--position: 11"><img src="./assets/react.png">
+              <p>react</p>
+            </div>
+            <div class="skill" style="--position: 12"><img src="./assets/python.png">
+              <p>python</p>
+            </div>
+            <div class="skill" style="--position: 13"><img src="./assets/Flask.png">
+              <p>flask</p>
+            </div>
+
+          </div>
+        </div>
+      
+      </div>
+
+      <div id="project">
+
+        <div class="row3-title"> recently done project </div>
+        <div id="mainProjectsContainer" class="row3-items">
+        </div>
+
+        <div id="more">
+          <label id="check" for="show-more-checkbox" class="about-btn">
+            show more
+          </label>
+          <input type="checkbox" id="show-more-checkbox" class="show-more">
+
+          <div  class="project-popup-container">
+
+            <div class="popup-tab" >
+              <div class="popup-cross">
+                <i class="fa-solid fa-x"></i>
+              </div>
+            </div>
+
+            <div class="popup-title">
+              More Project on react
+            </div>
+
+            <div id="secondaryProjectContainer" class="popup-project">
+            </div>
+          </div>
+        </div>
+
+      </div> 
+    </div>
+  </div>
+
+
+  <div id="contact">
+    <div class="contact-container">
+      <div class="contact-row">
+        <div class="contact-left">
+          <h1 class="sub-title main-heading">ping me</h1>
+          <p><i class="fa-solid fa-envelope"></i>sachinprajapti0203@gmail.com </p>
+          <p><i class="fa-solid fa-square-phone"></i>7037075725</p>
+          <div class="social-links">
+            <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter-square"></i></a>
+            <a href="https://linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <form id="contact_form">
+            <input type="text" name="from_name" placeholder="Your Name" required>
+            <input type="email" name="reply_to" placeholder="Your Email" required>
+            <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+            <button aria-label="submit the form" type="submit" class="btn btn-submit">submit <i
+              class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Made with ❤️ by Sachin
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("theme") || "light";
+      document.body.classList.add(`${savedTheme}-theme`);
+    })();
+  </script>
+</body>
+
 </html>
